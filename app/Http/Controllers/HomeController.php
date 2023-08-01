@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
+use Illuminate\Http\RedirectResponse;
 
 class HomeController extends Controller
 {
@@ -30,10 +31,13 @@ class HomeController extends Controller
     {
         return view('pages.about');
     }
-    public function changeLang(Request $request){
+    public function changeLang(Request $request) : RedirectResponse{
         App::setLocale($request->lang);
         session()->put('locale', $request->lang);
   
         return redirect()->back();
+    }
+    public function test(){
+        return;
     }
 }
