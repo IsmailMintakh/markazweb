@@ -83,36 +83,14 @@
                     <div id="navbarSupportedContent" class="collapse navbar-collapse navbar-responsive-collapse">
                         <!-- Main Menu Starts -->
                         <ul class="nav navbar-nav" id="main-navigation">
-                            <li class="active"><a href="index-kenburns.html"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="{{ route('about') }}"><i class="fa fa-user"></i> About Us</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-image"></i>
-                                    portfolio <i class="fa fa-angle-down icon-angle"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="portfolio-2-columns.html">Portfolio 2 Columns</a></li>
-                                    <li><a href="portfolio-3-columns.html">Portfolio 3 Columns</a></li>
-                                    <li><a href="portfolio-4-columns.html">Portfolio 4 Columns</a></li>
-                                    <li><a href="image-project.html">Image Project</a></li>
-                                    <li><a href="slider-project.html">Slider Project</a></li>
-                                    <li><a href="gallery-project.html">Gallery Project</a></li>
-                                    <li><a href="video-project.html">Video project</a></li>
-                                    <li><a href="youtube-project.html">youtube Project</a></li>
-                                    <li><a href="vimeo-project.html">Vimeo Project</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i>
-                                    Blog <i class="fa fa-angle-down icon-angle"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                                    <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                                    <li><a href="blog-grid-no-sidebar.html">Grid No Sidebar</a></li>
-                                    <li><a href="blog-post.html">Single Post</a></li>
-                                </ul>
-                            </li>
+                            <li class=""><a href="{{ route('index') }}" class="urdu-font">{{ GoogleTranslate::trans('Home',app()->getLocale()) }}</a></li>
+                            <li class=""><a href="{{ route('about') }}">{{ GoogleTranslate::trans('About Us',app()->getLocale()) }} </a></li>
+                            <li class=""><a href="{{ route('blog') }}">{{ GoogleTranslate::trans('Blog',app()->getLocale()) }}</a></li>
+                            <li class=""><a href="{{ route('project') }}">{{ GoogleTranslate::trans('Project',app()->getLocale()) }}</a></li>
+                            <li><a href="contact.html">{{ GoogleTranslate::trans('Contact',app()->getLocale())}}</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                        class="fa fa-file-text-o"></i> Language <i
+                                        class="fa fa-file-text-o"></i> {{ GoogleTranslate::trans('Language',app()->getLocale())}} <i
                                         class="fa fa-angle-down icon-angle"></i></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{{ route('change.Lang','en') }}"> <i class="fa fa-{{ session()->get('locale') == 'en' ? 'check' : '' }}"></i>English</a></li>
@@ -120,7 +98,6 @@
                                     
                                 </ul>
                             </li>
-                            <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
                             <!-- Cart Icon Starts -->
                             <li class="cart hidden-xs hidden-sm"><a href="shopping-cart.html"><i
                                         class="fa fa-shopping-cart"></i></a></li>
@@ -155,11 +132,12 @@
                         <h4>Markaz</h4>
                         <div class="menu">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="{{ route('home') }}">Home</a></li>
+                                <li><a href="{{ route('home') }}">Home</a></li>
                                 <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="pricing.html">pricing</a></li>
                                 <li><a href="portfolio-3-columns.html">portfolio</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog</a></li>
+                                <li><a href="{{ route('blog') }}">Blog</a></li>
                             </ul>
                         </div>
                     </div>

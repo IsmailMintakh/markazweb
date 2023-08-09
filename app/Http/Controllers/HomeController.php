@@ -31,10 +31,17 @@ class HomeController extends Controller
     {
         return view('pages.about');
     }
+    public function blog()
+    {
+        return view('pages.blog');
+    }
+    public function project()
+    {
+        return view('pages.project');
+    }
     public function changeLang(Request $request) : RedirectResponse{
         App::setLocale($request->lang);
         session()->put('locale', $request->lang);
-  
         return redirect()->back();
     }
     public function test(){

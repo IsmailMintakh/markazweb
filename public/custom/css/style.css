@@ -4898,8 +4898,8 @@ ul.bxslider img {
 }
 
 .banner.banner-blog-post {
-  background-image: url('../img/blog/banner-blog.jpg');
-  background-size: initial;
+  background-image: url('../images/3.jpg');
+  background-size: cover;
 }
 
 .blog-page .banner-blog-post .meta span {
@@ -6953,4 +6953,12 @@ body.normal .portfolio .container 	{
 
 .custom-team{
   margin-top: 1rem;
+}
+
+@font-face {
+    font-family: 'myFirstFont';
+        src: url('/public/fonts/urdu/Abbas/Abbas.ttf');
+}
+.urdu-font{
+  font-family: 'myFirstFont';
 }

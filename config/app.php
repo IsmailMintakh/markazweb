@@ -182,6 +182,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'GoogleTranslate' => Stichoza\GoogleTranslate\GoogleTranslate::class
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
